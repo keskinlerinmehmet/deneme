@@ -1,0 +1,26 @@
+{
+  "customers": [
+    {
+      "id": "inkilap",
+      "name": "İnkılap İçkili Lokanta",
+      "logo": "https://739studio.com/wp-content/uploads/2024/11/musteriler-07-231x300.png",
+      "openTasks": 3,
+      "keywords": ["inkılap", "inkilap", "lokanta"]
+    },
+    {
+      "id": "dagkapi",
+      "name": "Dağkapı Ciğer",
+      "logo": "https://dagkapiciger.com/menu/assets/dagkapi-logo1.svg",
+      "openTasks": 5,
+      "keywords": ["dağkapı", "dagkapi", "ciğer", "ciger"]
+    },
+    {
+      "id": "altinkanatlar",
+      "name": "Altınkanatlar Havacılık",
+      "logo": "https://www.altinkanatlarhavacilik.com/wp-content/uploads/2024/12/ALTIN_KANATLAR__2___3_-removebg.png",
+      "openTasks": 2,
+      "keywords": ["altınkanatlar", "altinkanatlar", "havacılık", "havacilik"]
+    }
+  ],
+  "unassigned": 0
+}
