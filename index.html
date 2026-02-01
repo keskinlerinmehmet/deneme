@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Görev Akışı</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg" aria-hidden="true"></div>
+    <main class="app">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Müşteri Görev Akışı</p>
+          <h1>Görev Merkezi</h1>
+        </div>
+        <button class="primary" id="open-task">+ Görev Ekle</button>
+      </header>
+
+      <section class="grid" id="customer-grid"></section>
+    </main>
+
+    <div class="modal" id="task-modal" aria-hidden="true">
+      <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <header>
+          <h2 id="modal-title">Yeni Görev</h2>
+          <button class="icon" id="close-task" aria-label="Kapat">✕</button>
+        </header>
+        <label>
+          Görev Açıklaması
+          <textarea id="task-text" placeholder="Örn: Dağkapı için menü güncellemesi hazırlansın"></textarea>
+        </label>
+        <div class="actions">
+          <button class="secondary" id="detect-task">Müşteriyi Algıla</button>
+          <button class="primary" id="save-task">Görevi Kaydet</button>
+        </div>
+        <p class="hint" id="detect-hint">Sistem metinden müşteriyi otomatik algılar. Algılayamazsa seçenek sunar.</p>
+      </div>
+    </div>
+
+    <div class="modal" id="resolve-modal" aria-hidden="true">
+      <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="resolve-title">
+        <header>
+          <h2 id="resolve-title">Müşteri Bulunamadı</h2>
+          <button class="icon" id="close-resolve" aria-label="Kapat">✕</button>
+        </header>
+        <p>Yazıdan müşteri algılanamadı. Görev başka kısma gönderilsin mi yoksa manuel müşteri seçmek ister misiniz?</p>
+        <div class="resolve-actions">
+          <button class="secondary" id="send-unassigned">Diğer Kısma Gönder</button>
+          <div>
+            <label for="manual-select">Manuel Seç</label>
+            <select id="manual-select"></select>
+          </div>
+          <button class="primary" id="assign-manual">Manuel Ata</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="toast" id="toast"></div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
